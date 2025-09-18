@@ -3,206 +3,148 @@
 
 // The questions and answers are stored here, securely on the server.
 $questions = [
+    // --- Multiple Choice (1-10) ---
     [
         'id' => 1,
         'type' => 'multiple',
-        'q' => 'What is a correct syntax to output "Hi Programming 1" in C?',
+        'q' => '1. What does a functional level determine?',
         'choices' => [
-            "A. cout << \"Hi Programming 1\";",
-            "B. System.out.printline(\"Hi Programming 1\");",
-            "C. printf(\"Hi Programming 1\");",
-            "D. Console.WriteLine(\"Hi Programming 1\");"
+            "A. The network speed",
+            "B. The AD DS features available",
+            "C. The number of users",
+            "D. The internet connection type"
         ],
-        'answer' => 'C. printf("Hi Programming 1");'
+        'answer' => 'B. The AD DS features available'
     ],
     [
         'id' => 2,
-        'type' => 'fill',
-        'q' => 'How do you insert COMMENTS in C code?',
-        'answer' => '//'
+        'type' => 'multiple',
+        'q' => '2. Which functional level affects features within a single domain?',
+        'choices' => [
+            "A. Forest Functional Level",
+            "B. Domain Functional Level",
+            "C. Network Functional Level",
+            "D. Local Functional Level"
+        ],
+        'answer' => 'B. Domain Functional Level'
     ],
     [
         'id' => 3,
-        'type' => 'truefalse',
-        'q' => 'When a variable is created in C, a memory address is assigned to the variable.',
-        'answer' => 'True'
+        'type' => 'multiple',
+        'q' => '3. Which functional level affects features across the entire AD forest?',
+        'choices' => [
+            "A. Domain Functional Level",
+            "B. Tree Functional Level",
+            "C. Forest Functional Level",
+            "D. Root Functional Level"
+        ],
+        'answer' => 'C. Forest Functional Level'
     ],
     [
         'id' => 4,
-        'type' => 'truefalse',
-        'q' => 'In C, code statements must end with a semicolon (;)',
-        'answer' => 'True'
+        'type' => 'multiple',
+        'q' => '4. What is required for all Domain Controllers (DCs) before raising the Domain Functional Level?',
+        'choices' => [
+            "A. They must be renamed",
+            "B. They must run compatible Windows Server versions",
+            "C. They must be turned off",
+            "D. They must be clustered"
+        ],
+        'answer' => 'B. They must run compatible Windows Server versions'
     ],
     [
         'id' => 5,
         'type' => 'multiple',
-        'q' => 'How can you create a variable with the numeric value 5?',
+        'q' => '5. What tool can check AD replication health?',
         'choices' => [
-            "A. val num = 5;",
-            "B. num = 5 int;",
-            "C. num = 5;",
-            "D. int num = 5;"
+            "A. tasklist",
+            "B. netstat",
+            "C. repadmin",
+            "D. ipconfig"
         ],
-        'answer' => 'D. int num = 5;'
+        'answer' => 'C. repadmin'
     ],
     [
         'id' => 6,
         'type' => 'multiple',
-        'q' => 'How can you create a variable with the floating number 2.8?',
+        'q' => '6. Which backup is recommended before raising the Domain Functional Level?',
         'choices' => [
-            "A. val num = 2.8;",
-            "B. float num = 2.8;",
-            "C. num = 2.8 double;",
-            "D. num = 2.8 float;"
+            "A. Incremental backup",
+            "B. System state backup",
+            "C. Differential backup",
+            "D. Cloud backup only"
         ],
-        'answer' => 'B. float num = 2.8;'
+        'answer' => 'B. System state backup'
     ],
     [
         'id' => 7,
         'type' => 'multiple',
-        'q' => 'Which operator is used to add together two values?',
+        'q' => '7. What group must you be a member of to raise the Domain Functional Level?',
         'choices' => [
-            "A. The * sign",
-            "B. The ADD keyword",
-            "C. The & sign",
-            "D. The + sign"
+            "A. Backup Operators",
+            "B. Domain Admins",
+            "C. Users",
+            "D. Power Users"
         ],
-        'answer' => 'D. The + sign'
+        'answer' => 'B. Domain Admins'
     ],
     [
         'id' => 8,
         'type' => 'multiple',
-        'q' => 'Which function is often used to output values and display text?',
+        'q' => '8. Which replication method should be used for SYSVOL at or above Windows Server 2008?',
         'choices' => [
-            "A. printf()",
-            "B. output()",
-            "C. printword()",
-            "D. write()"
+            "A. FRS",
+            "B. DFSR",
+            "C. HTTP",
+            "D. FTP"
         ],
-        'answer' => 'A. printf()'
+        'answer' => 'B. DFSR'
     ],
     [
         'id' => 9,
         'type' => 'multiple',
-        'q' => 'Which format specifier is often used to print integers?',
+        'q' => '9. What is a warning when raising the Domain Functional Level?',
         'choices' => [
-            "A. %s",
-            "B. %c",
-            "C. %d",
-            "D. %f"
+            "A. It can be lowered anytime",
+            "B. It can be reversed easily",
+            "C. It is permanent and irreversible",
+            "D. It causes no impact"
         ],
-        'answer' => 'C. %d'
+        'answer' => 'C. It is permanent and irreversible'
     ],
     [
         'id' => 10,
         'type' => 'multiple',
-        'q' => 'Which operator can be used to compare two values?',
+        'q' => '10. Which tool can be used as an alternative to GUI to raise Domain Functional Level?',
         'choices' => [
-            "A. ==",
-            "B. <>",
-            "C. ><",
-            "D. ="
+            "A. CMD",
+            "B. PowerShell",
+            "C. Notepad",
+            "D. Task Manager"
         ],
-        'answer' => 'A. =='
+        'answer' => 'B. PowerShell'
     ],
-    [
-        'id' => 11,
-        'type' => 'multiple',
-        'q' => 'Which operator can be used to find the memory size (in bytes) of a data type or variable?',
-        'choices' => [
-            "A. The length property",
-            "B. The sizeof property",
-            "C. The len property",
-            "D. The sizer property"
-        ],
-        'answer' => 'B. The sizeof property'
-    ],
-    [
-        'id' => 12,
-        'type' => 'multiple',
-        'q' => 'Which keyword can be used to make a variable unchangeable/read-only?',
-        'choices' => [
-            "A. const",
-            "B. final",
-            "C. constant",
-            "D. readonly"
-        ],
-        'answer' => 'A. const'
-    ],
-    [
-        'id' => 13,
-        'type' => 'multiple',
-        'q' => 'What do we call the following? int myNumbers[] = {25, 50, 75, 100};',
-        'choices' => [
-            "A. None of the above",
-            "B. A class",
-            "C. An array",
-            "D. A pointer"
-        ],
-        'answer' => 'C. An array'
-    ],
-    [
-        'id' => 14,
-        'type' => 'multiple',
-        'q' => 'Array indexes start with:',
-        'choices' => [
-            "A. 1",
-            "B. 0",
-            "C. -1",
-            "D. 10"
-        ],
-        'answer' => 'B. 0'
-    ],
-    [
-        'id' => 15,
-        'type' => 'fill',
-        'q' => 'Array indexes start with?',
-        'answer' => '0'
-    ],
-    [
-        'id' => 16,
-        'type' => 'multiple',
-        'q' => 'What does the \n character do in a C program?',
-        'choices' => [
-            "A. It creates a new line",
-            "B. It creates a space",
-            "C. It creates a tab",
-            "D. It creates a backslash"
-        ],
-        'answer' => 'A. It creates a new line'
-    ],
-    [
-        'id' => 17,
-        'type' => 'fill',
-        'q' => 'What is the code output? printf("Hello World! I am learning C.");',
-        'answer' => 'Hello World! I am learning C.'
-    ],
-    [
-        'id' => 18,
-        'type' => 'multiple',
-        'q' => 'Which data type is used to store integers (whole numbers) in C?',
-        'choices' => [
-            "A. char",
-            "B. float",
-            "C. int",
-            "D. double"
-        ],
-        'answer' => 'C. int'
-    ],
-    [
-        'id' => 19,
-        'type' => 'fill',
-        'q' => 'Use the correct format specifier to output the value of myNum: int myNum = 15; printf(" ", myNum);',
-        'answer' => '%d'
-    ],
-    [
-        'id' => 20,
-        'type' => 'fill',
-        'q' => 'What is the following code output? int myNum = 15; printf("%d", myNum);',
-        'answer' => '15'
-    ],
-    // Add more questions here. They will be safe on the server.
+
+    // --- True/False (11-20) ---
+    ['id'=>11,'type'=>'truefalse','q'=>'11. The Domain Functional Level can be lower than the Forest Functional Level.','answer'=>'False'],
+    ['id'=>12,'type'=>'truefalse','q'=>'12. All DCs must be compatible before raising the Domain Functional Level.','answer'=>'True'],
+    ['id'=>13,'type'=>'truefalse','q'=>'13. Testing applications before raising the level is recommended.','answer'=>'True'],
+    ['id'=>14,'type'=>'truefalse','q'=>'14. Raising the Domain Functional Level can be undone anytime.','answer'=>'False'],
+    ['id'=>15,'type'=>'truefalse','q'=>'15. You must be on the Primary Domain Controller (PDC) emulator to raise the level.','answer'=>'True'],
+    ['id'=>16,'type'=>'truefalse','q'=>'16. The process should be done during a maintenance window.','answer'=>'True'],
+    ['id'=>17,'type'=>'truefalse','q'=>'17. DFSR should replace FRS for SYSVOL replication at higher levels.','answer'=>'True'],
+    ['id'=>18,'type'=>'truefalse','q'=>'18. Replication health does not need to be checked before raising the level.','answer'=>'False'],
+    ['id'=>19,'type'=>'truefalse','q'=>'19. The GUI method uses Active Directory Domains and Trusts.','answer'=>'True'],
+    ['id'=>20,'type'=>'truefalse','q'=>'20. The PowerShell command Set-ADDomainMode is used to raise the level.','answer'=>'True'],
+
+    // --- Fill in the blanks (21-25) ---
+    ['id'=>21,'type'=>'fill','q'=>'21. In Method 1 (GUI), you must first log on to a __________ before opening Active Directory Domains and Trusts.','answer'=>'Domain Controller'],
+    ['id'=>22,'type'=>'fill','q'=>'22. In Method 1 (GUI), after selecting your domain, choose __________ Domain Functional Level to begin the process.','answer'=>'Raise'],
+    ['id'=>23,'type'=>'fill','q'=>'23. In Method 1 (GUI), after selecting the new level, you must click __________ and Apply to confirm the change.','answer'=>'Confirm'],
+    ['id'=>24,'type'=>'fill','q'=>'24. In Method 2 (PowerShell), you must open PowerShell with __________ privileges on a DC.','answer'=>'Administrator'],
+    ['id'=>25,'type'=>'fill','q'=>'25. In Method 2 (PowerShell), the command __________ is used to raise the Domain Functional Level.','answer'=>'Set-ADDomainMode']
 ];
+
 
 // List of students (for demonstration purposes)
 $students = [
